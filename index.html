@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+			overflow: hidden;
+			}
+			body{
+				background: rgb(0, 0, 2)
+			}
+			#he{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			#mues{
+				width: 300px;
+				border-radius: 9px;
+				overflow: hidden;
+			}
+			.w{
+				border-top: 1px solid #1976D2;
+			
+			}
+			.s{
+				display: block;
+				padding: 6px 5px;
+				background:#303F9F;
+				color: white;
+				position: relative;
+			}
+			.s:before{
+				content:" ";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background: #303F9F;
+				left: 6px;
+				bottom: -5px;
+				transform: rotate(45deg)
+			}
+			.s i{
+				margin-right: 10px;
+			}
+			.h{
+				overflow: hidden;
+				background: #333;
+				transition: max-height 0.9s;
+				max-height: 0;
+				animation: myanmita 0.8s;
+			}
+			.h a{
+
+				display: block;
+				padding: 10px 20px;
+				color: white;
+				font-size: 14px;
+				position: relative;
+			}
+			.h a:hover:before{
+				position: absolute;
+				content: " ";
+				left: -13px;
+				width: 20px;
+				height: 20px;
+				background: yellow;
+				transform: rotate(45deg);
+animation: mycolor infinite 0.6s;
+
+			}
+.w:target .h{
+	max-height: 600px;
+}
+@keyframes myanmita{
+	10%{
+transform: scale(-30, -10);
+	}
+	50%{
+transform: skew(30deg, 60deg);
+	}
+}
+@keyframes mycolor{
+	10%{
+background: #0288D1;
+	}
+	50%{
+background: #00BCD4;
+	}
+		80%{
+background: #7C4DFF;
+	}
+}
+	</style>
+</head>
+<body>
+	<div id="he">
+		<div id="mues">
+			<li class="w" id="q">
+				<a href="#q" class="s"><i class="fa fa-address-book" aria-hidden="true"></i>联系人</a>
+				<div class="h">
+					<a href="#">我希望这世界变得完整</a>
+					<a href="#">不悔自己的人生</a>
+				</div>
+			</li>
+
+			<li class="w" id="r">
+				<a href="#r"  class="s"><i class="fa fa-bell" aria-hidden="true"></i>信息通知</a>
+				<div class="h">
+					<a href="#">未发现通知</a>
+					<a href="#">未发现通知</a>
+				</div>
+			</li>
+
+			<li class="w" id="t">
+				<a href="#t"  class="s"> <i class="fa fa-cog" aria-hidden="true"></i>设置</a>
+				<div class="h">
+					<a href="#">主页设置</a>
+					<a href="#">内容设置</a>
+				</div>
+			</li>
+
+			<li class="w" id="u">
+				<a href="#u"  class="s"> <i class="fa fa-home fa-fw"></i>社区</a>
+				<div class="h">
+					<a href="#">github</a>
+					<a href="#">火狐MDM</a>
+				</div>
+			</li>
+		</div>
+	</div>
+</body>
+</html>
